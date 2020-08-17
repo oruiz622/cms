@@ -18,10 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -73,7 +74,35 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            @if (session()->has('success'))
+                <div class="container">
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                </div>
+            @endif
+            @auth
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="">Post</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">Categories</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="col-md-8">
+                            @yield('content')
+                        </div>
+                    </div>
+                </div
+            @else
+                @yield('content')
+            @endauth
         </main>
     </div>
 </body>
