@@ -10904,3 +10904,7 @@ a.text-dark:focus {
   }
 }
 
+.modal-active {
+  display: block;
+}
+
