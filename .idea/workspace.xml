@@ -20,10 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="068732b7-e713-45be-ae7e-d675ce58628a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_19_155348_add_soft_deletes_to_posts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/trix.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ana.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/burst.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/deng.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/emeric.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/peng.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/trix-core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/trix.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_17_012204_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_17_012204_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/welcomepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/welcomepage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,14 +170,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.env" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Less" />
+    <property name="settings.editor.selected.configurable" value="MTCustomThemeConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/app/Http/Requests/Posts" />
       <recent name="$PROJECT_DIR$/app/Http/Requests/Categories" />
     </key>
@@ -183,7 +204,9 @@
       <workItem from="1597675994002" duration="30478000" />
       <workItem from="1597720947862" duration="196000" />
       <workItem from="1597757906391" duration="1834000" />
-      <workItem from="1597801943699" duration="5341000" />
+      <workItem from="1597801943699" duration="5342000" />
+      <workItem from="1597851714372" duration="3340000" />
+      <workItem from="1597860192958" duration="601000" />
     </task>
     <servers />
   </component>
@@ -214,6 +237,10 @@
       <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state x="1034" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1600.873@0.27.1600.873" timestamp="1597685414259" />
+    <state x="868" y="237" width="722" height="460" key="EditFileWatcherDialog" timestamp="1597853913708">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="868" y="237" width="722" height="460" key="EditFileWatcherDialog/0.27.1600.873@0.27.1600.873" timestamp="1597853913708" />
     <state width="867" height="198" key="GridCell.Tab.0.bottom" timestamp="1597630760948">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
@@ -234,10 +261,10 @@
       <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state x="1087" y="385" width="399" height="164" key="NewPhpFileDialog/0.27.1600.873@0.27.1600.873" timestamp="1597710174329" />
-    <state x="529" y="149" width="900" height="751" key="SettingsEditor" timestamp="1597686227531">
+    <state x="222" y="80" width="900" height="751" key="SettingsEditor" timestamp="1597852366435">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
-    <state x="529" y="149" width="900" height="751" key="SettingsEditor/0.27.1600.873@0.27.1600.873" timestamp="1597686227531" />
+    <state x="222" y="80" width="900" height="751" key="SettingsEditor/0.27.1600.873@0.27.1600.873" timestamp="1597852366435" />
     <state width="579" height="446" key="SwitcherDM" timestamp="1597803325772">
       <screen x="0" y="27" width="1600" height="873" />
     </state>

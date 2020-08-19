@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'CMS') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -19,6 +16,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body>
     <div id="app">
@@ -81,10 +79,11 @@
                     </div>
                 </div>
             @endif
-            @auth
+                @auth
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
+
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <a href="{{ route('posts.index') }}">Post</a>
@@ -94,19 +93,28 @@
                                 </li>
                             </ul>
 
+                            <ul class="list-group mt-5">
+                                <li class="list-group-item">
+                                    <a href="{{ route('trashed-posts.index') }}">Trashed Post</a>
+                                </li>
+                            </ul>
+
                         </div>
                         <div class="col-md-8">
                             @yield('content')
                         </div>
                     </div>
-                </div
+                </div>
             @else
                 @yield('content')
             @endauth
         </main>
     </div>
 
-@yield('scripts')
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
+    @yield('scripts')
 
 </body>
 </html>

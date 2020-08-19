@@ -6,29 +6,33 @@
     </div>
     <div class="card card-default">
         <div class="card-header">Categories</div>
-        <table class="table">
-            <thead>
-                <th>Name</th>
-                <th></th>
-            </thead>
-            <tbody>
-            @foreach ($categories as $category)
-                <tr>
-                    <td>
-                        {{ $category->name }}
-                    </td>
-                    <td>
-                        <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-primary btn-sm">
-                            Edit
-                        </a>
-                        <button class="btn btn-danger btn-sm" onclick="handleDelete('{{ $category->id }}')">
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+        @if ($categories->count() > 0)
+            <table class="table">
+                <thead>
+                    <th>Name</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                @foreach ($categories as $category)
+                    <tr>
+                        <td>
+                            {{ $category->name }}
+                        </td>
+                        <td>
+                            <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-primary btn-sm">
+                                Edit
+                            </a>
+                            <button class="btn btn-danger btn-sm" onclick="handleDelete('{{ $category->id }}')">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        @else
+            <h3 class="text-center">No Categories to display...</h3>
+        @endif
     </div>
 
         <!-- Modal -->

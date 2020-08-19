@@ -10908,3 +10908,10 @@ a.text-dark:focus {
   display: block;
 }
 
+.welcomepage {
+  background-image: url("/images/deng.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px;
+}
+
