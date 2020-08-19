@@ -21,8 +21,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="contents">Contents</label>
-                    <textarea class="form-control" name="content" id="contents" cols="5" rows="5"></textarea>
+                    <label for="content">Content</label>
+                    <textarea class="form-control" name="content" id="content" cols="5" rows="5"></textarea>
                 </div>
 
                 <div class="form-group">
@@ -35,7 +35,7 @@
                     <input type="file" class="form-control" name="image" id="image">
                 </div>
 
-                <button class="btn btn-success">
+                <button class="btn btn-success" type="submit">
                     Create Post
                 </button>
 
