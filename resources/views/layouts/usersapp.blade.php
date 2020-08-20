@@ -88,7 +88,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-2">
 
                             <ul class="list-group">
                                 @if (auth()->user()->isAdmin())
@@ -116,7 +116,7 @@
                             </ul>
 
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-10">
                             @yield('content')
                         </div>
                     </div>
