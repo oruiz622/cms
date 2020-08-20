@@ -17,7 +17,7 @@ class User extends Authenticatable
         parent::boot();
 
         static::creating(function ($model) {
-            $model->{ $model->getKeyName() } = (string) Str::uuid();
+            $model->{$model->getKeyName()} = (string) Str::uuid();
         });
     }
 
@@ -47,4 +47,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
 }
