@@ -1,9 +1,9 @@
 @extends('layouts.usersapp')
 
 @section('content')
-    <div class="d-flex justify-content-end mb-2">
-        <a href="{{ route('posts.create') }}" class="btn btn-success">Add Post</a>
-    </div>
+<div class="d-flex justify-content-end mb-2">
+    <a href="{{ route('users.edit-profile') }}" class="btn btn-success">My Profile</a>
+</div>
     <div class="card card-default">
         <div class="card-header">Users</div>
         <div class="card-body">
