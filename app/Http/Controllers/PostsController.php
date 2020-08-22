@@ -47,29 +47,18 @@ class PostsController extends Controller
      */
     public function store(CreatePostsRequest $request)
     {
-        // $post = new Post();
-
-        // $post->title = $request->title;
-        // $post->description = $request->description;
-
         // Upload Image
         $image = $request->image->store('posts');
 
-        // $post->image = $request->image;
-        // $post->content = $request->content;
-        // $post->published_at = $request->published_at;
-        // $post->category_id = $request->category;
-        // $post->id = (string) Str::uuid();
-
         // Create the post
         $post = Post::create([
-            // 'id' => $post_id,
             'title' => $request->title,
             'description' => $request->description,
             'image' => $image,
             'content' => $request->content,
             'published_at' => $request->published_at,
             'category_id' => $request->category,
+            'user_id' => auth()->user()->id
         ]);
 
         if ($request->tags) {

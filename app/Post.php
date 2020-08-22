@@ -12,10 +12,11 @@ class Post extends Model
 
     public $incrementing = false;
 
-    // Do need fillable properties, I added protected $guarded = [] in the model class
-    // protected $fillable = [
-    //     'title', 'description', 'content', 'image', 'published_at', 'category_id'
-    // ];
+    // Do not need fillable properties, I added protected $guarded = [] in the model class
+    // Added for security reasons
+    protected $fillable = [
+        'title', 'description', 'content', 'image', 'published_at', 'category_id', 'user_id',
+    ];
 
     public function deleteImage()
     {
@@ -30,6 +31,11 @@ class Post extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
     /**
