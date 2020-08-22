@@ -4,7 +4,7 @@
 
         <div class="navbar-left">
             <button class="navbar-toggler" type="button">&#9776;</button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ route('welcome') }}">
                 <img class="logo-dark" src="{{ asset('images/logo/cmsblog100.png') }}" alt="logo">
                 <img class="logo-light" src="{{ asset('images/logo/cmsblog-reg100.png') }}" alt="logo">
             </a>

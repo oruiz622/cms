@@ -4,8 +4,12 @@ use App\Http\Controllers\Blog\PostsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::get('/about', 'AboutController@index')->name('about');
+Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::get('/blog/posts/{post}', [PostsController::class, 'show'])->name('blog.show');
+Route::get('/blog/categories/{category}', [PostsController::class, 'category'])->name('blog.category');
+Route::get('/blog/tags/{tag}', [PostsController::class, 'tag'])->name('blog.tag');
 Auth::routes();
 
 

@@ -1,20 +1,18 @@
-@extends('layouts.homeapp')
+@extends('layouts.welcomeapp')
 @section('title')
 <title>{{ $post->title }}</title>
 @endsection
 
 @section('content')
-<!--Navbar-->
+<!-- Navbar -->
 @include('partials.navbar')
 
 <!-- Header -->
 <header class="header text-white h-fullscreen pb-80"
     style="background-image: url({{ asset('storage/'.$post->image) }});" data-overlay="9">
     <div class="container text-center">
-
         <div class="row h-100">
             <div class="col-lg-8 mx-auto align-self-center">
-
                 <p class="opacity-70 text-uppercase small ls-1">
                     {{ $post->category->name }}
                 </p>
@@ -27,62 +25,40 @@
                     <img class="avatar avatar-sm" src="{{ Gravatar::src($post->user->email) }}"
                         alt="Post author's gravatar image">
                 </p>
-
             </div>
-
             <div class="col-12 align-self-end text-center">
                 <a class="scroll-down-1 scroll-down-white" href="#section-content"><span></span></a>
             </div>
-
         </div>
-
     </div>
 </header><!-- /.header -->
 
 <!-- Main Content -->
 <main class="main-content">
 
+    <!-- Blog Content --------------------->
 
-    <!--
-        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-        | Blog content
-        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-        !-->
     <div class="section" id="section-content">
         <div class="container">
-
-            {{!! $post->content !!}}
-
+            {!! $post->content !!}
             <div class="row">
                 <div class="gap-xy-2 mt-6">
                     @foreach ($post->tags as $tag)
-                    <a class="badge badge-pill badge-secondary" href="#">
+                    <a class="badge badge-pill badge-secondary" href="{{ route('blog.tag', $tag->id) }}">
                         {{ $tag->name }}
                     </a>
                     @endforeach
                 </div>
             </div>
-
         </div>
-
-
     </div>
     </div>
 
-
-
-    <!--
-        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-        | Comments
-        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-        !-->
+    <!--- Comments ------------------------>
     <div class="section bg-gray">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-
-
                     <hr>
                     <div id="disqus_thread"></div>
                     <script>
@@ -91,13 +67,13 @@
                         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
                         var disqus_config = function () {
-                        this.page.url = {{ config('app.url')}}"/blog/post/"{{ $post->id }};  // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.identifier = {{ $post->id }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        this.page.url = "{{ config('app.url') }}/blog/posts/{{ $post->id }}";  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "{{ $post->id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                         };
 
                         (function() { // DON'T EDIT BELOW THIS LINE
                             var d = document, s = d.createElement('script');
-                            s.src = 'https://cmsblog-4.disqus.com/embed.js';
+                            s.src = 'https://cmsblog-5.disqus.com/embed.js';
                             s.setAttribute('data-timestamp', +new Date());
                             (d.head || d.body).appendChild(s);
                         })();
@@ -106,17 +82,10 @@
                             powered by Disqus.</a></noscript>
                 </div>
             </div>
-
         </div>
     </div>
-
-
-
 </main>
 
-
-
-
 @include('partials.footer')
-
+<script id="dsq-count-scr" src="//cmsblog-5.disqus.com/count.js" async></script>
 @endsection

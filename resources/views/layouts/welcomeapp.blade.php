@@ -12,10 +12,11 @@
         <!-- Styles -->
         <link href="{{ asset('css/page.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/fonts/fontawesome.min.css') }}" rel="stylesheet">
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" href="{{ asset('images/cms-icon.png') }}">
-        <link rel="icon" href="{{ asset('images/cms-icon.png') }}">
+        <link rel="apple-touch-icon" href="{{ asset('images/logo/cms-icon.png') }}">
+        <link rel="icon" href="{{ asset('images/logo/cms-icon.png') }}">
     </head>
 
     <body>
@@ -24,6 +25,7 @@
         <!-- Scripts -->
         <script src="{{ asset('js/page.min.js') }}"></script>
         <script src="{{asset('/js/script.js')}}"></script>
+        <script src="{{asset('/js/fontawesome.min.js')}}"></script>
 
     </body>
 
