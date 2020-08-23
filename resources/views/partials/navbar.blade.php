@@ -14,31 +14,12 @@
             <span class="navbar-divider d-mobile-none"></span>
 
             <ul class="nav nav-navbar">
-
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Demos <span class="arrow"></span></a>
+                    <a class="nav-link" href="{{ route('portfolio') }}">My Portfolio <span class="arrow"></span></a>
+                    <nav class="nav">
+                        <a class="nav-link" href="{{ route('about') }}">About Me</a>
+                    </nav>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pages <span class="arrow"></span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Blog <span class="arrow"></span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Shop <span class="arrow"></span></a>
-                </li>
-
-                <li class="nav-item nav-mega">
-                    <a class="nav-link" href="#">Blocks <span class="arrow"></span></a>
-                </li>
-
-                <li class="nav-item nav-mega">
-                    <a class="nav-link" href="#">UI Kit <span class="arrow"></span></a>
-                </li>
-
             </ul>
         </section>
         <a href="{{ route('login') }}" class="btn btn-xs btn-round btn-info">Login</a>
